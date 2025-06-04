@@ -1,0 +1,51 @@
+.x-folllow-card {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: .8rem;
+    justify-content: space-between;
+}
+
+.x-folllow-card-header-header {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.x-folllow-card-header-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.x-follow-card-info-username {
+    opacity: 0.6;
+}
+
+.x-folllow-card-header-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 100px;
+}
+
+.x-follow-card-button {
+    cursor: pointer;
+    margin-left: 16px;
+    border: 0;
+    border-radius: 99px;
+    padding: 6px 16px;
+    font-weight: bold;
+    border: 1px solid #000;
+    transition: .3s ease background-color;
+}
+
+.x-follow-card-button.is-following {
+    border: 1px solid red;
+}
+
+.x-follow-card-button:hover {
+    background-color: #09f;
+}
+
+.x-follow-card-button.is-following:hover {
+    background: red;
+}
