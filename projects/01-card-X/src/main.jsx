@@ -5,7 +5,7 @@ import './index.css'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <h1>hola mis panas</h1>
+    <App />
   </StrictMode>,
 )
 
