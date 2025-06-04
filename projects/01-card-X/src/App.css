@@ -37,7 +37,7 @@
     border: 1px solid #000;
     transition: .3s ease background-color;
 }
-
+/*
 .x-follow-card-button.is-following {
     border: 1px solid red;
 }
@@ -48,4 +48,10 @@
 
 .x-follow-card-button.is-following:hover {
     background: red;
+}
+*/  
+body {
+    background: #000;
+    color: #fff;
+    font-family: sans-serif;
 }
