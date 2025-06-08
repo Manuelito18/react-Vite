@@ -1,12 +1,12 @@
-import { Children, useState } from 'react';
+import { Children, useState } from "react";
 
 const TURNS = {
-  X: 'x',
-  O: 'o',
+  X: "x",
+  O: "o",
 };
 
 const Square = ({ children, isSelected, updateBoard, index }) => {
-  const className = `square ${isSelected ? 'is-selected' : ''}`;
+  const className = `square ${isSelected ? "is-selected" : ""}`;
   const handleClick = () => {
     updateBoard(index);
   };
@@ -30,6 +30,9 @@ const WINNER_COMBOS = [
   [0, 4, 8],
   [2, 4, 6],
 ];
+
+
+
 
 function App() {
   const [board, setBoard] = useState(Array(9).fill(null));
@@ -55,9 +58,9 @@ function App() {
   const resetGame = () => {
     setBoard(Array(9).fill(null));
     setTurn(TURNS.X);
-    setWinner(null);
-  }
 
+    setWinner(null);
+  };
 
   const updateBoard = (index) => {
     if (board[index] || winner) return;
@@ -93,30 +96,19 @@ function App() {
         <Square isSelected={turn == TURNS.O}>{TURNS.O}</Square>
       </section>
 
-      {
-        winner !== null && (
-          <section className='winner'>
-            <div className='text'>
-            <h2>
-              {
-                winner === false
-                  ? 'Empate'
-                  : 'Ganador:'
-              }
-            </h2>
-            <header className='win'>
+      {winner !== null && (
+        <section className="winner">
+          <div className="text">
+            <h2>{winner === false ? "Empate" : "Ganador:"}</h2>
+            <header className="win">
               {winner && <Square>{winner}</Square>}
             </header>
-              <footer>
-                <button onClick={resetGame}>
-                  Empezar de nuevo
-                </button>
-              </footer>
-
-            </div>
-          </section>
-        )
-      }
+            <footer>
+              <button onClick={resetGame}>Empezar de nuevo</button>
+            </footer>
+          </div>
+        </section>
+      )}
     </main>
   );
 }
