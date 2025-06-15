@@ -15,12 +15,16 @@ function App() {
     if (enabled) {
       window.addEventListener("pointermove", handleMove);
     }
+    return () => {
+      window.removeEventListener("pointermove", handleMove);
+    };
   }, [enabled]);
 
   return (
     <main>
       <div
         style={{
+          display: enabled ? "block" : "none",
           position: "absolute",
           backgroundColor: "#09f",
           borderRadius: "50%",
