@@ -11,24 +11,13 @@
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
+    "eslint": "^8.57.1",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-promise": "^6.6.0",
     "eslint-plugin-react": "^7.37.5",
     "standard": "^17.1.2"
   },
   "eslintConfig": {
-    "extends": "./node_modules/standard/eslintrc.json",
-    "env": {
-      "browser": true,
-      "es2021": true
-    },
-    "parserOptions": {
-      "ecmaVersion": 12,
-      "sourceType": "module"
-    },
-    "rules": {
-      "react/prop-types": "off",
-      "react/react-in-jsx-scope": "off",
-      "no-unused-vars": "warn",
-      "no-console": "warn"
-    }
+    "extends": "./node_modules/standard/eslintrc.json"
   }
 }

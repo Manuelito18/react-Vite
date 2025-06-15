@@ -13,6 +13,7 @@ function App() {
       : Array(9).fill(null);
   });
 
+  
   const [turn, setTurn] = useState(() => {
     const turnFromStorage = window.localStorage.getItem("turn");
     return turnFromStorage ?? TURNS.X;
